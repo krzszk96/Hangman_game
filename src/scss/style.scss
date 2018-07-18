@@ -1,0 +1,198 @@
+$bg-color: #333;
+$color: #42f489;
+$white: #fff;
+$break-small: 700px;
+
+body{
+	background: $bg-color;
+}
+.title{
+	color: $color;
+	font-family: 'Coiny';
+	font-size: 60px;
+	letter-spacing: 5px;
+	padding: 20px;
+	border: solid 1px $white;
+	text-align: center;
+
+	.version{
+		display: inline-block;
+		font-size: 30px;
+	}
+
+	@media screen and(max-width: $break-small){
+		font-size: 30px;
+		.version{font-size: 15px;}
+	}
+}
+.wrap{
+	border: solid 1px $white;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+}
+.checkwrap{
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	border: solid 1px $white;
+}
+
+
+label{
+	color: $color;
+	font-family: 'Caveat';
+	font-size: 20px;
+	margin-left: 20px;
+}
+input{
+	margin: 10px;
+	padding: 10px;
+	border-radius: 25px;
+	background-color: #fff;
+	border: none;
+}
+
+
+.btn1{
+	border: solid 2px $color;
+	padding: 10px;
+	background-color: $bg-color;
+	color: $color;
+	font-size: 16px;
+	width: 60px;
+	height: 50px;
+	cursor:pointer;
+	&:hover{
+		color: #fff;
+		border: solid 2px #fff;
+	}
+	@media screen and(max-width: $break-small){
+		font-size: 12px;
+		padding: 5px;
+	}
+}
+
+.catcap{
+	color: $color;
+	margin: 0 5px 0 5px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+	display: flex;
+	align-items: center;
+	border: solid 1px #fff;
+  position: relative;
+  padding: 0 8px 0 40px;
+  list-style-type: none;
+  color: $color;
+  font-size: 18px;
+  transition: 0.2s;
+
+	@media screen and(max-width: $break-small){
+		font-size: 14px;
+	}
+}
+
+.import{
+	color: $color;
+	padding-left: 30px;
+	font-size: 18px;
+	@media screen and(max-width: $break-small){
+		font-size: 14px;
+	}
+}
+
+.red{
+	background-color: rgba(201, 76, 76, 0.3);
+}
+.yellow{
+	background-color: rgba(232, 244, 65, 0.3);
+}
+.green{
+	background-color: rgba(122, 244, 66, 0.3);
+}
+#color1{color: rgb(201, 76, 76);}
+#color2{color: rgb(232, 244, 65);}
+#color3{color: rgb(122, 244, 66);}
+
+p.checked{
+	justify-content: flex-start;
+	color: #fff;
+	text-decoration: line-through;
+}
+
+.item{display: inline-block;}
+.delete{
+	margin-left: 5px;
+	border: solid 2px #f73838;
+	padding: 10px;
+	background-color: $bg-color;
+	color: #f73838;
+	font-size: 16px;
+	border-radius: 25px;
+	cursor:pointer;
+	&:hover{
+		color: #fff;
+		border: solid 2px #fff;
+	}
+	@media screen and(max-width: $break-small){
+		font-size: 12px;
+	}
+}
+.edit{
+	margin-left: auto;
+	border: solid 2px $color;
+	padding: 10px;
+	background-color: $bg-color;
+	color: $color;
+	font-size: 16px;
+	border-radius: 25px;
+	cursor:pointer;
+	&:hover{
+		color: #fff;
+		border: solid 2px #fff;
+	}
+	@media screen and(max-width: $break-small){
+		font-size: 12px;
+	}
+}
+.Home{
+	background-image: url(../images/homeicon.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 50px;
+	height: 25px;
+}
+.Work{
+	background-image: url(../images/work.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 50px;
+	height: 25px;
+}
+.Food{
+	background-image: url(../images/food.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 50px;
+	height: 25px;
+}
+
+
+@font-face{
+	font-family: Coiny;
+	src:url(../fonts/Coiny/Coiny-Regular.ttf);
+}
+@font-face{
+	font-family: Caveat;
+	src:url(../fonts/Caveat_Brush/CaveatBrush-Regular.ttf);
+}

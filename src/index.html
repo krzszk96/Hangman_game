@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+  <title>ToDoList</title>
+
+
+      <!-- build:css css/style.css -->
+      <link rel="stylesheet" href="css/style.css">
+
+      <!-- endbuild -->
+
+
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+
+<div class="title">ToDoList <div class="version">v0.1</div></div>
+
+<div class="wrap">
+  <form>
+    <label for="todo">Add todo things:</label>
+      <input placeholder="Type todo task here" type="text" id="todo" name="todo">
+
+  </form>
+
+  <button class="btn1" onclick="addFunction(); clearField();">Add</button>
+
+
+  <div class="catcap">Add in category: </div>
+  <select id="categorylist" onchange="category()">
+    <option>Home</option>
+    <option>Work</option>
+    <option>Food</option>
+  </select>
+
+</div>
+
+  <div class="checkwrap">
+    <div class="import">Importance</div>
+    <label id="color1"><input type="checkbox" id="red" name="red">high</label>
+    <label id="color2"><input type="checkbox" id="yellow" name="yellow">medium</label>
+    <label id="color3"><input type="checkbox" id="green" name="green">low</label>
+  </div>
+
+<ul id="list" class="list"></ul>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
