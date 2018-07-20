@@ -7,8 +7,10 @@ var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
-var htmlreplace = require('gulp-html-replace');
+var htmlReplace = require('gulp-html-replace');
 var htmlMin = require('gulp-htmlmin');
+var del = require('del');
+var sequence = require('run-sequence');
 
 gulp.task('reload',function() {
   browserSync.reload();
@@ -54,9 +56,9 @@ gulp.task('img', function(){
   .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('task',function(){
+gulp.task('html',function(){
   return gulp.src('src/*.html')
-  .pipe(htmlreplace({
+  .pipe(htmlReplace({
     'css': 'css/style.css',
     'js': 'js/script.js'
   }))
@@ -66,6 +68,14 @@ gulp.task('task',function(){
     //collapseWhitespace: true
   }))
   .pipe(gulp.dest('dist/'))
+});
+
+gulp.task('clean', function(){
+  return del(['dist']);
+});
+
+gulp.task('build', function(){
+  sequence('clean', ['html', 'js', 'css', 'img']);
 });
 
 gulp.task('default', ['serve']);

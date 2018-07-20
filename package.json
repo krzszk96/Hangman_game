@@ -18,6 +18,7 @@
   "homepage": "https://github.com/krzszk96/Region_map#readme",
   "devDependencies": {
     "browser-sync": "^2.24.5",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-changed": "^3.2.0",
@@ -27,6 +28,7 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1"
   }
 }
