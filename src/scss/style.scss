@@ -1,10 +1,26 @@
 @import "settings";
 
-body {
+body, html {
+  height: 100%;
   background-color: $color-bg;
   color: $color-text;
 }
-p {
-  font-size: 14px;
+.header{
+  text-align: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.mapcontainer{
+  margin-top: 50px;
   display: flex;
+  //flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.map{
+  max-width: 100%;
+  height: auto;
+
 }
