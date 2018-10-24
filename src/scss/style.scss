@@ -5,22 +5,9 @@ body, html {
   background-color: $color-bg;
   color: $color-text;
 }
-.header{
+.title{
+  color: #fff;
   text-align: center;
-}
-*{
-  margin: 0;
-  padding: 0;
-}
-.mapcontainer{
-  margin-top: 50px;
-  display: flex;
-  //flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.map{
-  max-width: 100%;
-  height: auto;
-
+  font-size: 38px;
+  padding: 20px;
 }
