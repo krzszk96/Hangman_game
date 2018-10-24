@@ -1,9 +1,9 @@
-# krzszk96- Region_map
+# krzszk96- Hangman_game
 
 Project for learnign purposes, and to use.
 
 
-Live version: 
+Live version:
 
 ## Technologies I have used:
 

@@ -3,20 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGION_MAP</title>
+    <title>HANGMAN_GAME</title>
     <!--build:css -->
     <link rel="stylesheet" href="css/style.css">
     <!--endbuild -->
   </head>
   <body>
-    <body style="margin: 0;background-color: rgba(80,80,80,1);">
 
-      <div class="title">MAPA_REGIONÓW_AGENTÓW</div>
-  		<div id="map" style="width: 100%; height: 728px;"></div>
+      <div class="title">HANGMAN_GAME</div>
+      <form id="wordtoguess">
+        Type the word to guess:<br>
+        <input type="text" name="wordtoguess">
+        <button class="btn1" type="button" onclick="takeWord()">pass word</button>
+      </form>
+
+      <div id="typedword"></div>
+
+      <form id="lettertoguess">
+        <br>
+        Type the letter to check:<br>
+        <input type="text" name="gletter">
+        <button class="btn1" type="button" onclick="takeLetter(), guessCount()">pass letter</button>
+      </form>
+
+      <div id="typedletter"></div>
+      <div function="getAllletters"></div>
 
       <!--build:js -->
-      <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
-  		<script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/polandLow.js"></script>
+
       <script src="js/script.js"></script>
       <!--endbuild -->
   </body>
