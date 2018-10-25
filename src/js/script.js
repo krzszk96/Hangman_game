@@ -1,4 +1,5 @@
 var guess = 10;
+var sumletter = "";
 
 function takeWord() {
 
@@ -15,20 +16,31 @@ function takeLetter() {
     var x = document.getElementById("lettertoguess");
     var letter = "";
     var i;
-    for (i = 0; i < x.length; i++) {
-        letter = letter + x.elements[i].value;
-    }
-    localStorage.setItem("letter", letter);
-    document.getElementById("typedletter").innerHTML = localStorage.getItem("letter");
+        for (i = 0; i < x.length; i++) {
+            letter = letter + x.elements[i].value;
+        }
+        if(letter.length==1){
+          sumletter = sumletter + letter;
+          localStorage.setItem("sumletter", sumletter);
+          console.log(sumletter);
+          document.getElementById("typedletter").innerHTML = localStorage.getItem("sumletter");
+        }else{
+          guess++;
+          alert("Type only one letter -.-");
+        }
 }
 function letterCheck(){
   var y = localStorage.getItem("word");
   var z = localStorage.getItem("letter");
+  var licz = 0;
 
   for (i = 0; i < y.length; i++) {
-    if((y.charAt(i))==(z.charAt(0)))
+    if((y.charAt(i))==(z.charAt(0))){
       console.log("masz literke!" + (i+1));
+      licz++;
+    }
   }
+  if(licz==0){console.log("pudło!");}
 }
 
 function guessCount(){
