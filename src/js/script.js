@@ -1,5 +1,6 @@
 var guess = 10;
 var sumletter = "";
+var licz = 0;
 
 function takeWord() {
 
@@ -21,8 +22,9 @@ function takeLetter() {
         }
         if(letter.length==1){
           sumletter = sumletter + letter;
+          localStorage.setItem("letter", letter);
           localStorage.setItem("sumletter", sumletter);
-          console.log(sumletter);
+          //console.log(sumletter);
           document.getElementById("typedletter").innerHTML = localStorage.getItem("sumletter");
         }else{
           guess++;
@@ -32,21 +34,35 @@ function takeLetter() {
 function letterCheck(){
   var y = localStorage.getItem("word");
   var z = localStorage.getItem("letter");
-  var licz = 0;
+  var howbig = y.length;
+  var field = [];
+  console.log(licz);
+  if(licz==0){
+    for(j=0;j<howbig;j++){
+      field.splice( j, 0, "__" );
+    }
+    //console.log(field[0]);
+  }
 
   for (i = 0; i < y.length; i++) {
     if((y.charAt(i))==(z.charAt(0))){
-      console.log("masz literke!" + (i+1));
+    //  console.log("masz literke!" + (i+1));
+      field.splice( i, 1, z );
       licz++;
     }
   }
   if(licz==0){console.log("pudło!");}
+  //console.log(field);
+
+  localStorage.setItem("field", JSON.stringify(field));
+  var storedfield = JSON.parse(localStorage.getItem("field"));
+  console.log(storedfield);
 }
 
 function guessCount(){
   guess = guess - 1;
   if(guess<=0){console.log("game over")}
   else {
-    console.log(guess);
+    //console.log(guess);
   }
 }
