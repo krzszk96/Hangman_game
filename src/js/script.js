@@ -1,7 +1,15 @@
-var guess = 10;
+var guess = 10; // ta zmienna nie zmienia wartości
 var sumletter = "";
 var licz = 0;
+var field = [];
 
+function guessCount(){ // tan funckja tez nie działa
+
+  if(guess<=0){console.log("game over")}
+  else {
+    console.log(guess);
+  }
+}
 function takeWord() {
 
     var x = document.getElementById("wordtoguess");
@@ -11,7 +19,7 @@ function takeWord() {
         word = word + x.elements[i].value;
     }
     localStorage.setItem("word", word);
-    document.getElementById("typedword").innerHTML = localStorage.getItem("word");
+    //document.getElementById("typedword").innerHTML = localStorage.getItem("word");
 }
 function takeLetter() {
     var x = document.getElementById("lettertoguess");
@@ -24,7 +32,6 @@ function takeLetter() {
           sumletter = sumletter + letter;
           localStorage.setItem("letter", letter);
           localStorage.setItem("sumletter", sumletter);
-          //console.log(sumletter);
           document.getElementById("typedletter").innerHTML = localStorage.getItem("sumletter");
         }else{
           guess++;
@@ -35,34 +42,25 @@ function letterCheck(){
   var y = localStorage.getItem("word");
   var z = localStorage.getItem("letter");
   var howbig = y.length;
-  var field = [];
-  console.log(licz);
+
+  //console.log(licz+"licznik");
   if(licz==0){
     for(j=0;j<howbig;j++){
       field.splice( j, 0, "__" );
     }
-    //console.log(field[0]);
   }
-
   for (i = 0; i < y.length; i++) {
     if((y.charAt(i))==(z.charAt(0))){
-    //  console.log("masz literke!" + (i+1));
-      field.splice( i, 1, z );
-      licz++;
+        field.splice( i, 1, z );
+        licz++;
     }
   }
-  if(licz==0){console.log("pudło!");}
-  //console.log(field);
+  if(licz==0){
+    console.log("pudło!");
+    guess--; //tutaj poprawic bo nie działa
+  }
 
   localStorage.setItem("field", JSON.stringify(field));
   var storedfield = JSON.parse(localStorage.getItem("field"));
-  console.log(storedfield);
-}
-
-function guessCount(){
-  guess = guess - 1;
-  if(guess<=0){console.log("game over")}
-  else {
-    //console.log(guess);
-  }
+  document.getElementById("display").innerHTML = localStorage.getItem("field");
 }

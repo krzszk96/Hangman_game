@@ -23,11 +23,12 @@
         <br>
         Type the letter to check:<br>
         <input type="text" name="gletter">
-        <button class="btn1" type="button" onclick="takeLetter(), guessCount()">pass letter</button>
+        <button class="btn1" type="button" onclick="takeLetter(), letterCheck(), guessCount()">guess letter</button>
       </form>
 
       <div id="typedletter"></div>
-      <button class="btn1" type="button" onclick="letterCheck()">check word</button>
+
+      <div id="display"></div>
 
       <!--build:js -->
 
