@@ -21,16 +21,25 @@
 
       <form class="lettertoguess" id="lettertoguess">
         <br>
-        <div>Type the letter to check: </div><br>
+        <div>Type letter to check: </div><br>
         <input type="text" name="gletter">
         <button class="btn1" type="button" onclick="takeLetter(), letterCheck()">guess letter</button>
       </form>
 
-      <div class="typedletters" id="typedletter"></div>
+      <div class="wrap">
+        <div class="typedletters">guessed letters:</div>
+        <div class="typedletters" id="typedletter"></div>
+      </div>
 
-      <div class="display" id="display"></div>
+      <div class="wrap">
+        <div class="typedletters">word:</div>
+        <div class="display" id="display"></div>
+      </div>
 
-      <div class="guess" id="guess">guesses left:</div>
+      <div class="wrap">
+        <div class="typedletters">guesses left:</div>
+        <div class="guess" id="guess"></div>
+      </div>
 
 
       <!--build:js -->
