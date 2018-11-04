@@ -11,24 +11,27 @@
   <body>
 
       <div class="title">HANGMAN_GAME</div>
-      <form id="wordtoguess">
-        Type the word to guess:<br>
+      <form class="wordtoguess" id="wordtoguess">
+        <div>Type the word to guess: </div><br>
         <input type="password" name="wordtoguess">
         <button class="btn1" type="button" onclick="takeWord()">pass word</button>
       </form>
 
       <div id="typedword"></div>
 
-      <form id="lettertoguess">
+      <form class="lettertoguess" id="lettertoguess">
         <br>
-        Type the letter to check:<br>
+        <div>Type the letter to check: </div><br>
         <input type="text" name="gletter">
-        <button class="btn1" type="button" onclick="takeLetter(), letterCheck(), guessCount()">guess letter</button>
+        <button class="btn1" type="button" onclick="takeLetter(), letterCheck()">guess letter</button>
       </form>
 
-      <div id="typedletter"></div>
+      <div class="typedletters" id="typedletter"></div>
 
-      <div id="display"></div>
+      <div class="display" id="display"></div>
+
+      <div class="guess" id="guess">guesses left:</div>
+
 
       <!--build:js -->
 

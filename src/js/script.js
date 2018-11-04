@@ -5,9 +5,10 @@ var field = [];
 
 function guessCount(){ // tan funckja tez nie działa
 
-  if(guess<=0){console.log("game over")}
+  if(guess==1){console.log("game over")}
   else {
-    console.log(guess);
+    if(licz==2){guess--;}
+    console.log("zostalo prob-"+guess);
   }
 }
 function takeWord() {
@@ -29,7 +30,7 @@ function takeLetter() {
             letter = letter + x.elements[i].value;
         }
         if(letter.length==1){
-          sumletter = sumletter + letter;
+          sumletter = sumletter + letter + " - ";
           localStorage.setItem("letter", letter);
           localStorage.setItem("sumletter", sumletter);
           document.getElementById("typedletter").innerHTML = localStorage.getItem("sumletter");
@@ -49,16 +50,19 @@ function letterCheck(){
       field.splice( j, 0, "__" );
     }
   }
+  licz=2;
   for (i = 0; i < y.length; i++) {
+
     if((y.charAt(i))==(z.charAt(0))){
         field.splice( i, 1, z );
-        licz++;
+        licz=1;
+        //console.log(licz + "licznik");
+        //guess++;
     }
+
   }
-  if(licz==0){
-    console.log("pudło!");
-    guess--; //tutaj poprawic bo nie działa
-  }
+  guessCount();
+  //if(licz==0){console.log("pudło!");}
 
   localStorage.setItem("field", JSON.stringify(field));
   var storedfield = JSON.parse(localStorage.getItem("field"));
