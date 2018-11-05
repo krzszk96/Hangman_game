@@ -5,12 +5,39 @@ body, html {
   background-color: $color-bg;
   color: $color-text;
 }
+// .alert {
+//   z-index: 1;
+//   position: absolute;
+//   padding: 20px;
+//   background-color: #f44336;
+//   color: white;
+// }
+// .closebtn {
+//   margin-left: 15px;
+//   color: white;
+//   font-weight: bold;
+//   float: right;
+//   font-size: 22px;
+//   line-height: 20px;
+//   cursor: pointer;
+//   transition: 0.3s;
+// }
+// .closebtn:hover {
+//   color: black;
+// }
 .title{
   color: #fff;
   text-align: center;
   font-family: 'Orange-Juice';
   font-size: 100px;
-  padding: 20px;
+  padding: 20px 0 20px 0;
+
+  @media only screen and (max-width : 800px) {
+  font-size: 60px;
+  }
+  @media only screen and (max-width : 500px) {
+  font-size: 40px;
+  }
 }
 .wordtoguess{
   display: flex;
@@ -19,6 +46,13 @@ body, html {
   font-size: 20px;
   font-family: 'Montserrat-Regular';
   padding: 10px;
+
+  @media only screen and (max-width : 800px) {
+  font-size: 15px;
+  }
+  @media only screen and (max-width : 500px) {
+  font-size: 10px;
+  }
 }
 input{
   padding: 10px;
@@ -29,6 +63,13 @@ input{
   border: 2px solid #000;
   border-radius: 20px;
   outline-width: 0;
+
+  @media only screen and (max-width : 800px) {
+  font-size: 15px;
+  }
+  @media only screen and (max-width : 500px) {
+  font-size: 10px;
+  }
 }
 .lettertoguess{
   display: flex;
@@ -37,6 +78,13 @@ input{
   font-size: 20px;
   font-family: 'Montserrat-Regular';
   padding: 10px;
+
+  @media only screen and (max-width : 800px) {
+  font-size: 15px;
+  }
+  @media only screen and (max-width : 500px) {
+  font-size: 10px;
+  }
 }
 .btn1{
   background-color: #4CAF50;
@@ -53,6 +101,12 @@ input{
     background-color: #fff;
     color:#000;
   }
+  @media only screen and (max-width : 800px) {
+  font-size: 15px;
+  }
+  @media only screen and (max-width : 500px) {
+  font-size: 10px;
+  }
 }
 .wrap{
   display: flex;
@@ -64,6 +118,13 @@ input{
   font-size: 20px;
   font-family: 'Montserrat-Regular';
   padding: 10px;
+
+  @media only screen and (max-width : 800px) {
+  font-size: 15px;
+  }
+  @media only screen and (max-width : 500px) {
+  font-size: 10px;
+  }
 }
 .display{
   display: flex;
@@ -71,6 +132,13 @@ input{
   font-size: 20px;
   font-family: 'Montserrat-Regular';
   padding: 10px;
+
+  @media only screen and (max-width : 800px) {
+  font-size: 15px;
+  }
+  @media only screen and (max-width : 500px) {
+  font-size: 10px;
+  }
 }
 .guess{
   display: flex;
@@ -79,6 +147,13 @@ input{
   font-size: 20px;
   font-family: 'Montserrat-Regular';
   color:#000;
+
+  @media only screen and (max-width : 800px) {
+  font-size: 15px;
+  }
+  @media only screen and (max-width : 500px) {
+  font-size: 10px;
+  }
 }
 @font-face {
     font-family: Orange-Juice;
