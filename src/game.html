@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANGMAN_GAME</title>
+    <!--build:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--endbuild -->
+  </head>
+  <body>
+
+      <!-- <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+      </div> -->
+
+      <div class="title">HANGMAN_GAME</div>
+
+      <form class="wordtoguess" id="wordtoguess">
+        <div>Type the word to guess: </div><br>
+        <input type="password" name="wordtoguess">
+        <button class="btn1" type="button" onclick="takeWord()">pass word</button>
+      </form>
+
+      <div id="typedword"></div>
+
+      <form class="lettertoguess" id="lettertoguess">
+        <br>
+        <div>Type letter to check: </div><br>
+        <input type="text" name="gletter">
+        <button class="btn1" type="button" onclick="takeLetter(), letterCheck()">guess letter</button>
+      </form>
+
+
+      <div class="wrap">
+        <div class="typedletters">guessed letters:</div>
+        <div class="typedletters" id="typedletter"></div>
+      </div>
+
+      <div class="wrap">
+        <div class="typedletters">word:</div>
+        <div class="display" id="display"></div>
+      </div>
+
+      <div class="wrap">
+        <div class="typedletters">guesses left:</div>
+        <div class="guess" id="guess"></div>
+      </div>
+
+      <!--build:js -->
+
+      <script src="js/script.js"></script>
+      <!--endbuild -->
+  </body>
+</html>

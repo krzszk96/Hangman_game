@@ -1,9 +1,49 @@
 @import "settings";
-
+*{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
 body, html {
   height: 100%;
   background-color: $color-bg;
   color: $color-text;
+  margin: 0;
+}
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: 'Montserrat-Regular';
+  color:#000;
+  padding-top: 50px;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+li{
+  margin: 35px;
+}
+a{
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Montserrat-Regular';
+  background-color: #4CAF50;
+  padding: 15px;
+  border: 2px solid #000;
+  border-radius: 50px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+  &:hover{
+    color: #fff;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
 }
 // .alert {
 //   z-index: 1;
@@ -46,13 +86,14 @@ body, html {
   font-size: 20px;
   font-family: 'Montserrat-Regular';
   padding: 10px;
+  flex-direction: column;
 
   @media only screen and (max-width : 800px) {
   font-size: 15px;
   }
-  @media only screen and (max-width : 500px) {
-  font-size: 10px;
-  }
+  // @media only screen and (max-width : 500px) {
+  // //font-size: 10px;
+  // }
 }
 input{
   padding: 10px;
@@ -67,9 +108,9 @@ input{
   @media only screen and (max-width : 800px) {
   font-size: 15px;
   }
-  @media only screen and (max-width : 500px) {
-  font-size: 10px;
-  }
+  // @media only screen and (max-width : 500px) {
+  // font-size: 10px;
+  // }
 }
 .lettertoguess{
   display: flex;
@@ -78,17 +119,19 @@ input{
   font-size: 20px;
   font-family: 'Montserrat-Regular';
   padding: 10px;
+  flex-direction: column;
 
   @media only screen and (max-width : 800px) {
   font-size: 15px;
   }
-  @media only screen and (max-width : 500px) {
-  font-size: 10px;
-  }
+  // @media only screen and (max-width : 500px) {
+  // //font-size: 10px;
+  //
+  // }
 }
 .btn1{
   background-color: #4CAF50;
-  border: 2px solid #4CAF50;
+  border: 2px solid #000;
   color: #fff;
   border-radius: 25px;
   outline-width: 0;
@@ -97,6 +140,7 @@ input{
   margin: 5px;
   padding: 10px;
   cursor: pointer;
+  outline:0;
   &:hover{
     background-color: #fff;
     color:#000;
@@ -108,27 +152,34 @@ input{
   font-size: 10px;
   }
 }
+#button{
+  font-size: 20px;
+}
+.cointainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
 .wrap{
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 .typedletters{
-  //display: flex;
-  //justify-content: center;
   font-size: 20px;
   font-family: 'Montserrat-Regular';
-  padding: 10px;
+  padding-top: 20px;
 
-  @media only screen and (max-width : 800px) {
-  font-size: 15px;
-  }
-  @media only screen and (max-width : 500px) {
-  font-size: 10px;
-  }
+ @media only screen and (max-width : 800px) {
+ font-size: 15px;
+ }
+//  @media only screen and (max-width : 500px) {
+//  font-size: 10px;
+//  }
 }
 .display{
-  display: flex;
-  justify-content: center;
   font-size: 20px;
   font-family: 'Montserrat-Regular';
   padding: 10px;
@@ -136,24 +187,29 @@ input{
   @media only screen and (max-width : 800px) {
   font-size: 15px;
   }
-  @media only screen and (max-width : 500px) {
-  font-size: 10px;
-  }
+  // @media only screen and (max-width : 500px) {
+  // font-size: 10px;
+  // }
 }
 .guess{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 20px;
   font-family: 'Montserrat-Regular';
   color:#000;
+  padding: 10px;
 
   @media only screen and (max-width : 800px) {
   font-size: 15px;
   }
-  @media only screen and (max-width : 500px) {
-  font-size: 10px;
-  }
+  // @media only screen and (max-width : 500px) {
+  // font-size: 10px;
+  // }
+}
+.credits{
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-family: 'Montserrat-Regular';
+  padding: 30px;
 }
 @font-face {
     font-family: Orange-Juice;
