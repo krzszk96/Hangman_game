@@ -8,7 +8,43 @@ function guessCount(){
   else {
     if(licz==2){guess--;}
     //console.log("zostalo prob -" + guess);
-    document.getElementById("guess").innerHTML = guess;
+    //document.getElementById("guess").innerHTML = guess;
+  }
+  if(guess==9){
+    document.getElementById('hang1').style.display = 'initial';
+    document.getElementById('hang10').style.display = 'none';
+  }
+  if(guess==8){
+    document.getElementById('hang2').style.display = 'initial';
+    document.getElementById('hang1').style.display = 'none';
+  }
+  if(guess==7){
+    document.getElementById('hang3').style.display = 'initial';
+    document.getElementById('hang2').style.display = 'none';
+  }
+  if(guess==6){
+    document.getElementById('hang4').style.display = 'initial';
+    document.getElementById('hang3').style.display = 'none';
+  }
+  if(guess==5){
+    document.getElementById('hang5').style.display = 'initial';
+    document.getElementById('hang4').style.display = 'none';
+  }
+  if(guess==4){
+    document.getElementById('hang6').style.display = 'initial';
+    document.getElementById('hang5').style.display = 'none';
+  }
+  if(guess==3){
+    document.getElementById('hang7').style.display = 'initial';
+    document.getElementById('hang6').style.display = 'none';
+  }
+  if(guess==2){
+    document.getElementById('hang8').style.display = 'initial';
+    document.getElementById('hang7').style.display = 'none';
+  }
+  if(guess==1){
+    document.getElementById('hang9').style.display = 'initial';
+    document.getElementById('hang8').style.display = 'none';
   }
 }
 

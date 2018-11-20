@@ -25,6 +25,10 @@ body, html {
   margin: 0 auto;
   border-radius: 50px;
   border: 1px solid #000;
+
+  @media only screen and (max-width : 800px) {
+    width: 250px;
+  }
 }
 ul{
   display: flex;
@@ -214,6 +218,19 @@ input{
   // font-size: 10px;
   // }
 }
+.hang{
+  width: 250px;
+  height: auto;
+}
+#hang9{display: none;}
+#hang8{display: none;}
+#hang7{display: none;}
+#hang6{display: none;}
+#hang5{display: none;}
+#hang4{display: none;}
+#hang3{display: none;}
+#hang2{display: none;}
+#hang1{display: none;}
 .credits{
   display: flex;
   justify-content: center;
