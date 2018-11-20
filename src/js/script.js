@@ -21,6 +21,7 @@ function takeWord() {
         word = word.toLowerCase();
     }
     localStorage.setItem("word", word);
+    document.getElementById("wordtoguess1").value='';
 }
 function checkWin(){
     var h = localStorage.getItem("word");
@@ -51,6 +52,7 @@ function takeLetter() {
         }else{
           alert("Type only one letter -.-");
         }
+        document.getElementById("lettertoguess1").value='';
 }
 function letterCheck(){
   var y = localStorage.getItem("word");
