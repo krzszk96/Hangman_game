@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="icon" href="../images/suicide.png">
+    <link rel="icon" href="./images/suicide.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HANGMAN_GAME</title>
@@ -21,9 +21,9 @@
       <div class="menuwrap">
 
         <form class="wordtoguess" id="wordtoguess" onSubmit="return false;">
-          <div>Type the word to guess: </div><br>
+          <div id="tohide1">Type the word to guess: </div><br>
           <div class="inputwrap">
-            <input type="password" name="wordtoguess" id="wordtoguess1">
+            <input type="password" name="wordtoguess" id="wordtoguess1" placeholder="Word to guess">
             <button class="btn1" type="button" onclick="takeWord()">pass word</button>
           </div>
         </form>
@@ -32,9 +32,9 @@
 
         <form class="lettertoguess" id="lettertoguess" onSubmit="return false;">
           <br>
-          <div>Type letter to check: </div><br>
+          <div id="tohide2">Type letter to check: </div><br>
           <div class="inputwrap">
-            <input type="text" name="gletter" id="lettertoguess1">
+            <input type="text" name="gletter" id="lettertoguess1" placeholder="Letter to check">
             <button class="btn1" type="button" id="biggerbutton" onclick="takeLetter(), letterCheck()">guess letter</button>
           </div>
         </form>
@@ -52,16 +52,16 @@
         <div class="wrap">
           <!-- <div class="typedletters">guesses left:</div>
           <div class="guess" id="guess"></div> -->
-          <img src="../images/hang1.png" class="hang" id="hang1">
-          <img src="../images/hang2.png" class="hang" id="hang2">
-          <img src="../images/hang3.png" class="hang" id="hang3">
-          <img src="../images/hang4.png" class="hang" id="hang4">
-          <img src="../images/hang5.png" class="hang" id="hang5">
-          <img src="../images/hang6.png" class="hang" id="hang6">
-          <img src="../images/hang7.png" class="hang" id="hang7">
-          <img src="../images/hang8.png" class="hang" id="hang8">
-          <img src="../images/hang9.png" class="hang" id="hang9">
-          <img src="../images/hang10.png" class="hang" id="hang10">
+          <img src="./images/hang1.png" class="hang" id="hang1">
+          <img src="./images/hang2.png" class="hang" id="hang2">
+          <img src="./images/hang3.png" class="hang" id="hang3">
+          <img src="./images/hang4.png" class="hang" id="hang4">
+          <img src="./images/hang5.png" class="hang" id="hang5">
+          <img src="./images/hang6.png" class="hang" id="hang6">
+          <img src="./images/hang7.png" class="hang" id="hang7">
+          <img src="./images/hang8.png" class="hang" id="hang8">
+          <img src="./images/hang9.png" class="hang" id="hang9">
+          <img src="./images/hang10.png" class="hang" id="hang10">
         </div>
       </div>
 
