@@ -22,8 +22,10 @@
 
         <form class="wordtoguess" id="wordtoguess" onSubmit="return false;">
           <div>Type the word to guess: </div><br>
-          <input type="password" name="wordtoguess" id="wordtoguess1">
-          <button class="btn1" type="button" onclick="takeWord()">pass word</button>
+          <div class="inputwrap">
+            <input type="password" name="wordtoguess" id="wordtoguess1">
+            <button class="btn1" type="button" onclick="takeWord()">pass word</button>
+          </div>
         </form>
 
         <div id="typedword"></div>
@@ -31,8 +33,10 @@
         <form class="lettertoguess" id="lettertoguess" onSubmit="return false;">
           <br>
           <div>Type letter to check: </div><br>
-          <input type="text" name="gletter" id="lettertoguess1">
-          <button class="btn1" type="button" onclick="takeLetter(), letterCheck()">guess letter</button>
+          <div class="inputwrap">
+            <input type="text" name="gletter" id="lettertoguess1">
+            <button class="btn1" type="button" id="biggerbutton" onclick="takeLetter(), letterCheck()">guess letter</button>
+          </div>
         </form>
 
         <div class="wrap">
